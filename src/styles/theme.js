@@ -1,8 +1,8 @@
 export const colors = {
   background: "#EAEAEA",
   backgroundSecondary: "#F8F8F8",
-  text: "#848886",
-  textSecondary: "#aaaaaa",
+  text: "#263795;",
+  textSecondary: "#3c3b3b",
   border: "#EAEAEA",
 };
 

@@ -1,19 +1,20 @@
 import React from "react";
-import { useDispatch, Provider } from "react-redux";
+import { useDispatch } from "react-redux";
+import { List } from "./components/List";
 
-import { GlobalStyles } from "./styles";
-import store from "./store";
-
+import { Wrapper, Title } from "./components";
 import { testAction } from "./state/actions";
 
 function App() {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <GlobalStyles />
-      <button onClick={() => dispatch(testAction())}>Click</button>
-    </div>
+    <>
+      <Wrapper>
+        <Title>Bidouille info</Title>
+        <List />
+      </Wrapper>
+    </>
   );
 }
 
