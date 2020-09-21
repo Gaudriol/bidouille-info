@@ -5,3 +5,11 @@ export const colors = {
   textSecondary: "#aaaaaa",
   border: "#EAEAEA",
 };
+
+export const colorsDark = {
+  background: "#272727",
+  backgroundSecondary: "#393C3E",
+  text: "#bfbebe",
+  textSecondary: "#868886",
+  border: "#272727",
+};
