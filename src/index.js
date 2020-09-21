@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 
+import hackerNewsApi from "./services/hackerNewsApi";
+
 import * as serviceWorker from "./serviceWorker";
 import App from "./App";
 import store from "./store";
-import { colors, GlobalStyles } from "./styles"
+import { colors, GlobalStyles } from "./styles";
+
+hackerNewsApi.getTopStoriesIds().then(ids => console.log(ids));
 
 ReactDOM.render(
   <React.StrictMode>
