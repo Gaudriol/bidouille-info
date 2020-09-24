@@ -1,18 +1,21 @@
 const initalState = {
-  test: 0,
+  ids: undefined,
+  stories: undefined,
 };
 
-function reducer(state = initalState, action) {
-  console.log(action, state)
+export function stories(state = initalState, action) {
   switch (action.type) {
-    case "TEST_ACTION": {
-      console.log(state.test)
-      return { ...state, test: ++state.test };
+    case "FETCH_IDS_SUCCESS": {
+      const ids = action.payload;
+      return { ...state, ids };
+    }
+    case "FETCH_STORIES_SUCCESS": {
+      const { payload: stories } = action;
+      return { ...state, stories };
     }
     default:
-      return state
+      return state;
   }
-
 }
 
-export default reducer;
+export default stories;
