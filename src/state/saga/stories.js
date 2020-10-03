@@ -21,7 +21,6 @@ function* fetchStories({ payload }) {
   try {
     const { ids, page } = payload;
     const stories = yield hackerNewsApi.getStoriesByPage(ids, page);
-    console.log(stories);
     yield put(fetchStoriesSuccess(stories));
   } catch (e) {
     console.log(e);

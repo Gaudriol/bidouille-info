@@ -26,7 +26,7 @@ function App() {
     <>
       <Wrapper>
         <Title>Bidouille info</Title>
-        <List />
+        <List stories={stories} />
       </Wrapper>
     </>
   );
